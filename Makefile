@@ -2,7 +2,8 @@ NAME	=	base24
 
 SRC	=	main.c \
 		error.c \
-		str.c
+		str.c \
+		strtoword.c
 
 INC_DIR	=	include
 
