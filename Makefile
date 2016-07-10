@@ -2,7 +2,7 @@ NAME	=	base24
 
 SRC	=	main.c \
 		error.c \
-		rostring.c
+		str.c
 
 INC_DIR	=	include
 

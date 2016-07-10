@@ -16,21 +16,8 @@ int	main(int argc, char **argv)
   len_tab_num = strlen(str);
   free(str);
   somme(num, len_tab_num);
+  free(num);
   return (EXIT_SUCCESS);
-}
-
-void	adjust_str(char *str)
-{
-  int	i = -1;
-
-  while (str[++i] != '\0')
-    {
-      if (str[i] >= 'a' && str[i] <= 'z')
-	str[i] -= 32;
-      else if (str[i] >= 'A' && str[i] <= 'Z');
-      else
-	str[i] = ' ';
-    }
 }
 
 int	*encode(char *str)
@@ -67,11 +54,11 @@ void	somme(int *tab, int len)
 {
   int	i = -1;
   int	exp = len - 1;
-  int	total = 0;
+  long long	total = 0;
   while (++i < len)
     {
-      total += tab[i] * (pow(2.0, (double)exp));
+      total += tab[i] * (pow(26.0, (double)exp));
       exp --;
     }
-  printf("%d\n", total);
+  printf("%lld\n", total);
 }
