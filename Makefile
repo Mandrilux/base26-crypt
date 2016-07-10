@@ -1,4 +1,4 @@
-NAME	=	base64
+NAME	=	base24
 
 SRC	=	main.c \
 		error.c \
@@ -22,7 +22,7 @@ all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LDFLAGS)
-		@$(ECHO) '\033[0;32m> base64 Compiled\033[0m'
+		@$(ECHO) '\033[0;32m> base24 Compiled\033[0m'
 
 clean	:
 		-@$(RM) $(OBJ)

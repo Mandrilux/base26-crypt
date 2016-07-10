@@ -14,8 +14,8 @@ int	main(int argc, char **argv)
   if ((num = encode(str)) == NULL)
     return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
   len_tab_num = strlen(str);
-
   free(str);
+  somme(num, len_tab_num);
   return (EXIT_SUCCESS);
 }
 
@@ -65,5 +65,13 @@ int	get_indice(char	c)
 
 void	somme(int *tab, int len)
 {
-
+  int	i = -1;
+  int	exp = len - 1;
+  int	total = 0;
+  while (++i < len)
+    {
+      total += tab[i] * (pow(2.0, (double)exp));
+      exp --;
+    }
+  printf("%d\n", total);
 }
