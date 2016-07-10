@@ -43,3 +43,20 @@ void    adjust_str(char *str)
 	str[i] = ' ';
     }
 }
+
+int     get_indice(char c)
+{
+  char  alpha[27] = {0};
+  int   i = -1;
+  int   s = 'A';
+
+  while (++i < 26)
+    alpha[i] = s + i;
+  i = -1;
+  while (alpha[++i] != '\0')
+    {
+      if (alpha[i] == c)
+	return (i);
+    }
+  return (-1);
+}

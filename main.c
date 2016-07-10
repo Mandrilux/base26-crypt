@@ -19,6 +19,7 @@ int	main(int argc, char **argv)
 	return (EXIT_FAILURE);
     }
   printf("\n");
+  free_double_char(word);
   return (EXIT_SUCCESS);
 }
 
@@ -47,23 +48,6 @@ int	*encode(char *str)
   while (str[++i] != '\0')
       num[i] = get_indice(str[i]);
   return (num);
-}
-
-int	get_indice(char	c)
-{
-  char	alpha[27] = {0};
-  int	i = -1;
-  int	s = 'A';
-
-  while (++i < 26)
-    alpha[i] = s + i;
-  i = -1;
-  while (alpha[++i] != '\0')
-    {
-      if (alpha[i] == c)
-	return (i);
-    }
-  return (-1);
 }
 
 void	somme(int *tab, int len)

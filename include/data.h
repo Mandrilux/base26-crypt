@@ -15,6 +15,10 @@ char*		 complete_line(char *str, int nb, char decoup);
 char		 **small_tab(char *str);
 char		 **strtowordtab(char *str, char decoup);
 
+		/* free.c */
+
+int		 free_double_char(char **tab);
+
 		/* error.c */
 
 int		 return_error(char *error, int flag);
@@ -23,13 +27,13 @@ int		 return_error(char *error, int flag);
 
 char		 *epur_str(char *str);
 void		 adjust_str(char *str);
+int		 get_indice(char c);
 
 		/* main.c */
 
 int		 main(int argc, char **argv);
 int		 base_26(char *str);
 int		 *encode(char *str);
-int		 get_indice(char c);
 void		 somme(int *tab, int len);
 
 #endif /* DATA_H_ */
