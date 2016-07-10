@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	return (EXIT_FAILURE);
     }
   printf("\n");
-  free_double_char(word);
+  free(word);
   return (EXIT_SUCCESS);
 }
 
