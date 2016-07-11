@@ -1,4 +1,4 @@
-NAME	=	base24
+NAME	=	base26
 
 SRC	=	main.c \
 		error.c \
@@ -22,7 +22,7 @@ all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LDFLAGS)
-		@$(ECHO) '\033[0;32m> base24 Compiled\033[0m'
+		@$(ECHO) '\033[0;32m> base26 Compiled\033[0m'
 
 clean	:
 		-@$(RM) $(OBJ)
